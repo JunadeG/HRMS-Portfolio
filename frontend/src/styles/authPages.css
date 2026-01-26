@@ -1,0 +1,19 @@
+.message-container {
+    height: 40px; /* Reserve vertical space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .message-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  .message-text.error {
+    color: red;
+  }
+  

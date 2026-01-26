@@ -1,0 +1,11 @@
+# Dependencies
+/node_modules
+
+# Build directory
+/build
+
+# Local environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

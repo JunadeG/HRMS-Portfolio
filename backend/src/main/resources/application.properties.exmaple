@@ -1,0 +1,52 @@
+# PostgreSQL Configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/HRMSbackenddb
+spring.datasource.username=your_DB_Username
+spring.datasource.password=yourpassword
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA Configuration
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# JWT Secret Key (for authentication)
+jwt.secret=CHANGE_THIS_TO_A_RANDOM_SECRET_KEY
+jwt.expiration=86400000
+# spring.security.debug=false # Keep false unless needed
+
+# Mailtrap Configuration
+spring.mail.host=sandbox.smtp.mailtrap.io
+spring.mail.port=2525
+spring.mail.username=YOUR_MAILTRAP_USERNAME
+spring.mail.password=YOUR_MAILTRAP_PASSWORD
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+
+
+# Frontend URL for links (e.g., password reset)
+frontend.url=http://localhost:3000
+
+# Logging Levels (Set to DEBUG for troubleshooting)
+logging.level.root=INFO
+logging.level.com.HRMSbackend.HRMSbackend=DEBUG
+logging.level.org.springframework.web=DEBUG
+logging.level.org.springframework.security=DEBUG
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql=TRACE
+
+# --- Profile Picture Upload Directory ---
+upload.dir.profile-pics=C:/temp_hrms_uploads
+
+# Optional: Configure max file sizes for uploads
+spring.servlet.multipart.max-file-size=5MB
+spring.servlet.multipart.max-request-size=10MB
+upload.dir.expense-receipts=C:/temp_hrms_uploads/receipts
+
+hrms.company.email.domain=workwave.com
+
+upload.dir.documents=C:/temp_hrms_uploads/documents
+
+
+
+

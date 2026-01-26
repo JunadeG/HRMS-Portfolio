@@ -1,0 +1,121 @@
+/* src/styles/themes.css */
+
+/* --- Global Scrollbar Styling (Dark Sidebar Theme) --- */
+/* This targets the main scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f232b; /* A very dark, near-black color matching the dark theme sidebar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a6a8a; /* A muted, dark blue-grey for the handle */
+  border-radius: 10px;
+  border: 3px solid #1f232b; /* Creates padding using the track's color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6c7dff; /* A brighter, accent blue for hover, matching the dark theme accent */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #4a6a8a #1f232b; /* thumb color, track color */
+}
+
+
+/* --- Theme Color Variables (No Changes) --- */
+body.light-theme {
+  --background-primary: #f4f7f6;
+  --background-secondary: #ffffff;
+  --background-tertiary: #e9ecef;
+  --background-hover: #f0f3f8;
+  --background-accent-light: #e0e8ff;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --text-on-accent: #ffffff;
+  --text-accent: #5B40B4;
+  --text-link: #0d6efd;
+  --text-error: #dc3545;
+  --text-success: #198754;
+  --border-primary: #dee2e6;
+  --border-secondary: #e9ecef;
+  --border-accent: #5B40B4;
+  --border-error: #f5c6cb;
+  --border-success: #c3e6cb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --sidebar-background: #2c3e50;
+  --sidebar-text: #ecf0f1;
+  --sidebar-text-secondary: #bdc3c7;
+  --sidebar-hover-bg: #34495e;
+  --sidebar-active-bg: #34495e;
+  --sidebar-active-border: #3498db;
+  --sidebar-separator: #34495e;
+}
+body.dark-theme {
+  --background-primary: #1a1d24;
+  --background-secondary: #252a33;
+  --background-tertiary: #303641;
+  --background-hover: #383f4a;
+  --background-accent-light: #303641;
+  --text-primary: #e8e8e8;
+  --text-secondary: #adb5bd;
+  --text-muted: #6c757d;
+  --text-on-accent: #ffffff;
+  --text-accent: #8a75e7;
+  --text-link: #6c7dff;
+  --text-error: #f8d7da;
+  --text-success: #d1e7dd;
+  --border-primary: #495057;
+  --border-secondary: #383f4a;
+  --border-accent: #8a75e7;
+  --border-error: #a94442;
+  --border-success: #155724;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --sidebar-background: #1f232b;
+  --sidebar-text: #d0d8e8;
+  --sidebar-text-secondary: #9098a8;
+  --sidebar-hover-bg: #2f3440;
+  --sidebar-active-bg: #2f3440;
+  --sidebar-active-border: #6c7dff;
+  --sidebar-separator: #2f3440;
+}
+
+/* --- Global Animation Keyframes (No Changes) --- */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* --- Base Styles (No Changes) --- */
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+/* ... all other base styles ... */
+h1, h2, h3, h4, h5, h6 { color: var(--text-primary); margin-top: 0; }
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.widget-card, .sidebar, .sidebar a, button, input, select, textarea, main, header,
+.profile-container, .attendance-container, .admin-container, .approval-container,
+.form-container { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid var(--border-primary); padding: 0.5em 0.75em; text-align: left; }
+th { background-color: var(--background-tertiary); color: var(--text-secondary); font-weight: 600; }
+input, select, textarea { font-family: inherit; font-size: 1em; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+button { cursor: pointer; transition: all 0.2s ease-in-out; border: 1px solid transparent; font-family: inherit; font-size: 1em; }
+button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 4px 8px var(--shadow-color); }
+button:active:not(:disabled) { transform: translateY(-1px); box-shadow: 0 2px 4px var(--shadow-color); }
+button:focus-visible { outline: none; border-color: var(--text-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--text-accent) 25%, transparent); }
+.message-display { font-size: 0.95em; margin: 15px 0; padding: 10px 15px; border-radius: 4px; text-align: center; }
+.message-display.error { color: var(--text-error); background-color: color-mix(in srgb, var(--text-error) 10%, var(--background-secondary)); border: 1px solid var(--border-error); }
+.message-display.success { color: var(--text-success); background-color: color-mix(in srgb, var(--text-success) 10%, var(--background-secondary)); border: 1px solid var(--border-success); }

@@ -1,0 +1,479 @@
+/* src/Dashboard/Widgets/Widgets.css */
+
+/* Base card style using CSS Variables */
+.widget-card {
+    background-color: var(--background-secondary); /* Use Variable */
+    color: var(--text-primary); /* Set base text color */
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 1px 3px var(--shadow-color); /* Use Variable */
+    border: 1px solid var(--border-primary); /* Use Variable */
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.widget-card h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.0em; /* Adjusted size */
+    font-weight: 600;
+    color: var(--text-primary); /* Use Variable */
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-secondary); /* Use Variable */
+    flex-shrink: 0; /* Prevent title shrinking */
+}
+
+/* Container for the main content of the widget */
+.widget-content {
+    flex-grow: 1; /* Allow content to fill space */
+    display: flex; /* Enable flex for alignment within content */
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* KPI Card */
+.kpi-card {
+    min-width: 140px;
+    text-align: center;
+    padding: 15px 10px;
+    flex: 1; /* Allow KPIs to share space */
+    justify-content: center; /* Center content vertically */
+}
+.kpi-title {
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.kpi-value {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    line-height: 1.1;
+}
+.kpi-trend {
+    font-size: 0.75em;
+    color: var(--text-muted);
+    min-height: 1em; /* Ensure space even if empty */
+    line-height: 1.2;
+}
+
+/* Engagement Chart */
+.engagement-chart .chart-wrapper {
+    height: 100%; /* Ensure chart wrapper takes height */
+    min-height: 200px; /* Minimum height for the chart */
+    position: relative;
+    flex-grow: 1; /* Allow chart to grow */
+    display: flex; /* Center content if needed */
+    justify-content: center;
+    align-items: center;
+}
+.engagement-chart p { /* Style for placeholder text */
+    color: var(--text-muted);
+    text-align: center;
+    padding: 50px 10px; /* Padding for placeholder */
+}
+
+/* Meetings Widget */
+.meetings-widget h4 { margin-bottom: 10px; }
+.meetings-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto; /* Scroll if meetings exceed height */
+    max-height: 180px; /* Limit height */
+}
+.meeting-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-secondary);
+    font-size: 0.9em;
+}
+.meeting-item:last-child { border-bottom: none; }
+.meeting-time {
+    font-weight: bold;
+    color: var(--text-accent);
+    margin-right: 15px;
+    width: 55px;
+    text-align: right;
+    flex-shrink: 0;
+}
+.meeting-title {
+    color: var(--text-secondary);
+    overflow: hidden; /* Prevent long titles breaking layout */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.meetings-widget > p { /* Placeholder text */
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- Action Needed Widget Styles --- */
+.action-needed-alert {
+    border-left: 5px solid var(--text-error); /* Use theme error color for border */
+    background-color: color-mix(in srgb, var(--text-error) 10%, var(--background-secondary)); /* Subtle background tint */
+}
+.action-needed-clear {
+    border-left: 5px solid var(--text-success); /* Use theme success color */
+    background-color: color-mix(in srgb, var(--text-success) 10%, var(--background-secondary)); /* Subtle background tint */
+}
+.action-needed-alert h4,
+.action-needed-clear h4 {
+     margin-bottom: 8px; /* Slightly less space below the title */
+}
+.action-needed-alert p,
+.action-needed-clear p {
+    margin-bottom: 5px; /* Space between the message and the link area */
+    /* flex-grow: 1; REMOVED: Let the text take natural height, button div will use margin-top: auto */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+.action-link {
+    color: var(--text-link); /* Use theme link color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-block; /* Needed for potential padding/margin */
+    padding: 2px 0; /* Small vertical padding */
+}
+.action-link:hover {
+    text-decoration: underline;
+    color: color-mix(in srgb, var(--text-link) 80%, black); /* Slightly darken link on hover */
+}
+/* --- End Action Needed Widget Styles --- */
+
+
+/* --- Not Checked In Widget --- */
+.not-checked-in-widget h4 { margin-bottom: 10px; }
+
+/* Key change: Make widget-content a flex container to push button down */
+.not-checked-in-widget .widget-content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    flex-grow: 1;           /* Take available space */
+    position: relative;     /* Needed if .show-all-button was still absolute */
+    overflow: hidden;       /* Handles overflow if content is too tall */
+}
+
+.not-checked-in-widget .user-list-horizontal {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scroll */
+    padding-bottom: 10px; /* Space below the list */
+    /* margin-bottom removed, spacing handled by button's container */
+    /* Add scrollbar styling if desired */
+     scrollbar-width: thin; /* Firefox */
+     scrollbar-color: var(--text-muted) var(--background-tertiary); /* Firefox */
+}
+/* Webkit scrollbar styling (Chrome, Safari) */
+.not-checked-in-widget .user-list-horizontal::-webkit-scrollbar {
+    height: 6px; /* Height of horizontal scrollbar */
+}
+.not-checked-in-widget .user-list-horizontal::-webkit-scrollbar-track {
+    background: var(--background-tertiary);
+    border-radius: 3px;
+}
+.not-checked-in-widget .user-list-horizontal::-webkit-scrollbar-thumb {
+    background-color: var(--text-muted);
+    border-radius: 3px;
+}
+.user-summary-item {
+    text-align: center;
+    min-width: 80px;
+    flex-shrink: 0; /* Prevent items shrinking */
+}
+.user-avatar-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 1px solid var(--border-primary);
+}
+.user-name-small {
+    font-size: 0.85em;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px; /* Limit width */
+    color: var(--text-primary);
+}
+.user-designation-small {
+    font-size: 0.75em;
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px; /* Limit width */
+}
+
+/* "Show all" button styling - REMOVE position: absolute */
+.show-all-button {
+    background: none;
+    border: none;
+    color: var(--text-link);
+    cursor: pointer;
+    font-size: 0.9em;
+    /* position: absolute;  <--- REMOVED */
+    /* bottom: 0px;         <--- REMOVED */
+    /* right: 0px;          <--- REMOVED */
+    padding: 5px;
+    display: inline-block; /* Or block if it's in its own div */
+    align-self: flex-end; /* If its parent is flex and direction column */
+}
+.show-all-button:hover { text-decoration: underline; }
+
+/* Placeholder text within the "Not Checked In" widget content */
+.not-checked-in-widget .widget-content > p {
+    color: var(--text-muted);
+    text-align: center;
+    margin: auto; /* This helps center the text vertically when it's the only child of flex container */
+}
+/* --- End Not Checked In Widget --- */
+
+
+/* Noticeboard Widget */
+.noticeboard-widget .widget-content {
+    overflow-x: auto; /* Enable horizontal scroll for table */
+}
+.notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85em;
+    min-width: 600px; /* Ensure table has minimum width */
+}
+.notice-table th, .notice-table td {
+    padding: 8px 10px; /* Increased padding */
+    text-align: left;
+    border-bottom: 1px solid var(--border-secondary);
+    white-space: nowrap; /* Prevent text wrapping by default */
+    color: var(--text-primary);
+}
+.notice-table th {
+    font-weight: bold;
+    color: var(--text-secondary);
+    background-color: var(--background-tertiary);
+    position: sticky; /* Make headers stick on scroll */
+    top: 0;
+    z-index: 1; /* Ensure header is above table content during scroll */
+}
+/* Allow subject and audience to wrap if needed */
+.notice-table td:nth-child(1), /* Subject */
+.notice-table td:nth-child(6) { /* Audience */
+    white-space: normal;
+    min-width: 150px; /* Give them some minimum space */
+}
+
+.noticeboard-widget > .widget-content > p { /* Placeholder text */
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 20px;
+}
+.priority-badge {
+    padding: 2px 8px; /* Adjusted padding */
+    border-radius: 10px;
+    color: var(--text-on-accent);
+    font-size: 0.8em;
+    font-weight: 600; /* Bolder */
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.2; /* Adjust line height */
+}
+/* Priority colors */
+.priority-high { background-color: #dc3545; } /* Red */
+.priority-medium { background-color: #ffc107; color: #333; } /* Yellow - override text color */
+.priority-low { background-color: #17a2b8; } /* Teal */
+
+/* Custom Calendar Styles using Variables */
+.calendar-widget { overflow: hidden; /* Prevent calendar bleeding */ }
+.calendar-container .react-calendar {
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 0.85em;
+    background-color: var(--background-secondary); /* Use theme background */
+}
+/* Navigation */
+.calendar-container .react-calendar__navigation button {
+    color: var(--text-accent);
+    background: none;
+    border: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    min-width: 40px;
+}
+.calendar-container .react-calendar__navigation button:hover:enabled {
+    background-color: var(--background-hover);
+    border-radius: 3px;
+}
+.calendar-container .react-calendar__navigation button:disabled {
+    color: var(--text-muted);
+    background-color: transparent;
+}
+.calendar-container .react-calendar__navigation__label { /* Center month/year label */
+    flex-grow: 0 !important;
+    font-weight: bold;
+    pointer-events: none; /* Prevent click if needed */
+}
+/* Weekdays */
+.calendar-container .react-calendar__month-view__weekdays__weekday {
+    color: var(--text-secondary);
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    text-decoration: none; /* Remove underline */
+    abbr[title] { border-bottom: none !important; text-decoration: none !important; cursor: default; } /* Remove abbr underline */
+}
+/* Day Tiles */
+.calendar-container .react-calendar__tile {
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    padding: 0.75em 0.5em;
+    margin: 1px;
+    border-radius: 3px;
+    flex-basis: calc(100% / 7) !important; /* Ensure 7 days per row */
+    max-width: calc(100% / 7);
+}
+.calendar-container .react-calendar__tile:enabled:hover,
+.calendar-container .react-calendar__tile:enabled:focus {
+    background-color: var(--background-hover);
+}
+.calendar-container .react-calendar__tile--now { /* Today */
+    background: var(--background-accent-light) !important; /* Light accent bg */
+    font-weight: bold;
+    color: var(--text-accent) !important; /* Accent text color */
+}
+.calendar-container .react-calendar__tile--active { /* Selected */
+    background: var(--text-accent) !important; /* Use accent color */
+    color: var(--text-on-accent) !important; /* Text color on accent */
+}
+.calendar-container .react-calendar__tile--hasActive { /* For range selection if used */
+    background: var(--text-accent);
+    color: var(--text-on-accent);
+}
+.calendar-container .react-calendar__tile:disabled {
+    color: var(--text-muted);
+    background-color: transparent;
+    opacity: 0.5;
+}
+.calendar-container .react-calendar__month-view__days__day--neighboringMonth {
+    color: var(--text-muted) !important; /* Ensure neighbor days are muted */
+    opacity: 0.7;
+}
+.calendar-container .react-calendar__year-view .react-calendar__tile,
+.calendar-container .react-calendar__decade-view .react-calendar__tile,
+.calendar-container .react-calendar__century-view .react-calendar__tile {
+    padding: 1.5em 0.5em; /* More padding for year/decade views */
+}
+/* --- NEW STYLES for Detailed Meeting Widget --- */
+.meeting-item-detailed {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--border-secondary);
+    gap: 15px;
+}
+.meeting-item-detailed:last-child {
+    border-bottom: none;
+}
+
+.meeting-time-detailed {
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--text-accent);
+    flex-shrink: 0;
+    width: 90px;
+    text-align: center;
+}
+
+.meeting-info-detailed {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.meeting-title-detailed {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meeting-creator-detailed {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.meetings-list-interactive { list-style: none; padding: 0; margin: 0; }
+.meeting-item-interactive {
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--border-secondary);
+}
+.meeting-main-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+.meeting-time-interactive { font-weight: 600; font-size: 1.1em; color: var(--text-accent); flex-shrink: 0; width: 90px; text-align: center; }
+.meeting-details-interactive { display: flex; flex-direction: column; overflow: hidden; flex-grow: 1; }
+.meeting-title-interactive { font-weight: 500; color: var(--text-primary); font-size: 0.95em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.meeting-creator-interactive { font-size: 0.8em; color: var(--text-secondary); font-style: italic; }
+.meeting-status-icon { margin-left: auto; font-size: 1.2em; }
+
+.meeting-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 8px 0 0 0;
+    margin-left: 105px; /* Align with details */
+}
+.meeting-actions button {
+    border: 1px solid;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.meeting-actions button.accept { border-color: var(--text-success); color: var(--text-success); background: transparent; }
+.meeting-actions button.accept:hover { background-color: var(--text-success); color: white; }
+.meeting-actions button.decline { border-color: var(--text-error); color: var(--text-error); background: transparent; }
+.meeting-actions button.decline:hover { background-color: var(--text-error); color: white; }
+
+.meeting-attendee-list {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--background-tertiary);
+    border-radius: 4px;
+    margin-left: 105px; /* Align with details */
+    font-size: 0.85em;
+}
+.meeting-attendee-list ul { list-style: none; padding: 0; margin-top: 5px; }
+.meeting-attendee-list li { display: flex; align-items: center; gap: 8px; padding: 2px 0; }
+
+/* Add this rule to force a Monday start for the calendar grid */
+/* (Removed empty .react-calendar__month-view__weekdays ruleset) */
+
+/* Add this rule to force a Monday start for the calendar grid */
+/* .react-calendar__month-view__weekdays {
+    /* This uses a modern CSS feature to specify the start column */
+    /* It tells the calendar's weekday header to start on Monday */
+    /* This might not be necessary if formatShortWeekday works as expected */
+/* } */ 

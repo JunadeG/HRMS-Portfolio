@@ -1,0 +1,24 @@
+# --- GLOBAL IGNORES ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# --- BACKEND IGNORES ---
+/backend/target/
+/backend/mvnw
+/backend/mvnw.cmd
+/backend/.mvn
+# CRITICAL: Ignore the file with real passwords
+/backend/src/main/resources/application.properties
+
+# --- FRONTEND IGNORES ---
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+# CRITICAL: Ignore local env files
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local

@@ -1,0 +1,125 @@
+/* stylesHomePage.css */
+
+.dashboard-page {
+    display: flex;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #f4f7f6;
+}
+
+.dashboard-content {
+    background-image: url(C:\Users\junad_dkpn2io\OneDrive\Documents\2025 HRMS\FRONTENDhrms\hrms-frontend\src\Dash2.jpg); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #DBE9EF;
+    padding: 10px 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Changed to 100% */
+    margin-top: 0; /* Removed margin-top */
+    /* border-radius: 8px; */  /* Commented out or remove this line */
+    display: flex; /* Added flex layout */
+    flex-direction: column; /* Stack items vertically */
+}
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex: 1; /* Allow ul to take remaining vertical space */
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+.sidebar li:hover {
+    background-color: #F2F4F3; 
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    background-color: #F2F4F3;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+        
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: block;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.dashboard-content h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.user-info-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.user-info-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.user-info-container p {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.85em;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.tabs button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.tabs button.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.tab-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

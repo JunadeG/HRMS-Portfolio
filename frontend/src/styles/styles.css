@@ -1,0 +1,114 @@
+/* styles.css */
+
+.dashboard-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 30px; /* Increased padding */
+    background-color: #f9f9f9; /* Added background color */
+}
+
+.dashboard-content h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.widgets-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.widget {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Increased padding */
+    margin: 15px; /* Increased margin */
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.widget h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.widget p {
+    line-height: 1.6;
+}
+
+/* Style the announcements list */
+.widget ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.widget li {
+    margin-bottom: 8px;
+}
+
+/* EmployeeList Styles */
+.employee-list-container {
+    margin-top: 20px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white; /* Add background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.employee-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.employee-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,137 @@
+/* src/Dashboard/WorkwaveDashboard.css */
+
+.workwave-dashboard {
+    padding: 25px;
+    background-color: var(--background-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1600px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+/* Base row style */
+.dashboard-row {
+    display: flex;
+    gap: 20px; /* Gap between items within a row */
+    width: 100%;
+    align-items: stretch; /* Default: Make items in row same height */
+}
+
+/* Row 1: KPIs */
+.layout-kpi-row {
+    flex-wrap: wrap; /* Allow KPIs to wrap on smaller screens */
+    justify-content: space-around; /* Distribute KPIs */
+}
+
+/* Row 2: Engagement & Calendar */
+.layout-chart-calendar-row {
+    flex-wrap: wrap; /* Allow stacking on smaller screens */
+}
+.engagement-chart-container {
+    flex: 2 1 500px; /* Chart takes more space */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.calendar-container {
+    flex: 1 1 300px; /* Calendar takes less space */
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+.calendar-container .react-calendar {
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 0.85em;
+}
+.calendar-container .react-calendar__viewContainer {
+    flex-grow: 1;
+}
+
+/* Row 3: Meetings/Action & Not Checked In */
+.layout-meetings-absent-row {
+    flex-wrap: wrap;
+}
+.meetings-action-group-container {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.not-checked-in-container {
+    flex: 1 1 50%;
+    min-width: 320px;
+}
+
+/* Row 4: Noticeboard */
+.noticeboard-container {
+    width: 100%;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 992px) {
+    .layout-chart-calendar-row,
+    .layout-meetings-absent-row {
+         flex-direction: column;
+         align-items: stretch;
+    }
+    .engagement-chart-container,
+    .calendar-container,
+    .meetings-action-group-container,
+    .not-checked-in-container {
+        flex-basis: auto;
+        width: 100%;
+    }
+    .engagement-chart-container { min-height: 300px; }
+    .calendar-container { min-height: 350px; }
+}
+
+@media (max-width: 768px) {
+    .workwave-dashboard {
+        padding: 15px;
+        gap: 15px;
+    }
+    .dashboard-row {
+         gap: 15px;
+    }
+    .layout-kpi-row {
+        justify-content: center;
+    }
+}
+
+/* --- Animation Keyframes & Classes --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-row-animate {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Staggered delay classes */
+.delay-1 {
+  animation-delay: 150ms;
+}
+.delay-2 {
+  animation-delay: 300ms;
+}
+.delay-3 {
+  animation-delay: 450ms;
+}
+.delay-4 {
+  animation-delay: 600ms;
+}

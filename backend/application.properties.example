@@ -1,0 +1,23 @@
+# PostgreSQL Configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DB_NAME
+spring.datasource.username=YOUR_DB_USERNAME
+spring.datasource.password=YOUR_DB_PASSWORD
+# ... rest of the properties
+
+# JWT Secret Key (Generate a new one for the example)
+jwt.secret=GENERATE_A_NEW_RANDOM_BASE64_SECRET_FOR_THE_EXAMPLE
+jwt.expiration=86400000
+
+# Mailtrap Configuration
+spring.mail.host=sandbox.smtp.mailtrap.io
+spring.mail.port=2525
+spring.mail.username=YOUR_MAILTRAP_USERNAME
+spring.mail.password=YOUR_MAILTRAP_PASSWORD
+
+# Frontend URL
+frontend.url=http://localhost:3000
+
+# Upload Directories
+upload.dir.profile-pics=C:/temp_hrms_uploads/profiles
+upload.dir.expense-receipts=C:/temp_hrms_uploads/receipts
+upload.dir.documents=C:/temp_hrms_uploads/documents

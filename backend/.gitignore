@@ -1,0 +1,18 @@
+# Compiled output
+/target/
+/build/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+
+# Log files
+*.log
+
+# Sensitive configuration files
+application.properties
+
+# Operating System files
+.DS_Store
+Thumbs.db
