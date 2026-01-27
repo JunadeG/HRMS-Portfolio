@@ -1,95 +1,40 @@
-# WorkWave: Enterprise Human Resource Management System (HRMS)
+# Enterprise Human Resource Management System (HRMS)
 
-A full-stack HRMS solution designed to streamline employee management, attendance tracking, payroll, and asset allocation.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-## 🚀 Features
+## 📖 Overview
 
-*   **Role-Based Access:** Distinct panels for Super Admin, Admin (Company level), and Employees.
-*   **Attendance & Timesheets:** Real-time clock-in/out and weekly timesheet submission/approval workflows.
-*   **Payroll Automation:** Configurable salary structures, automated tax calculations, and payslip generation.
-*   **Asset Management:** Tracking of company assets assigned to employees.
-*   **Security:** Secured with Spring Security and JWT Authentication.
+This is a comprehensive, full-stack HRMS designed to handle complex organizational workflows. Unlike simple management apps, this system implements real-world business logic including **salary disbursement**, **taxation structures**, **attendance tracking**, and **role-based security**.
+
+It supports multi-tenancy (multiple companies), making it suitable for large-scale deployment.
 
 ---
 
-## 🛠️ Prerequisites
+## ✨ Key Features
 
-Before you begin, ensure you have the following installed:
-*   **Java 21 (JDK)**
-*   **Node.js & npm**
+*   **Role-Based Access:** Distinct portals for Super Admin, Company Admin, and Employees.
+*   **Onboarding & KYC:** Complete workflow from "Pending" to "Verified" with document uploads.
+*   **Payroll System:** Configurable salary structures per department, automated payslip generation, and disbursement tracking.
+*   **Attendance & Timesheets:** Real-time clock-in/out, attendance correction requests, and weekly timesheet approvals.
+*   **Communication:** Internal help desk ticketing system and email notifications (via SMTP).
+*   **Asset Management:** Tracking of company devices and allocation to employees.
+
+---
+
+## ⚙️ Installation & Setup Guide
+
+**Note:** This application includes an automatic **Data Seeder**. You do not need to manually insert users to test the application. Follow the steps below, and the system will populate itself with demo data on the first run.
+
+### 1. Prerequisites
+*   **Java 21** (JDK)
+*   **Node.js** (v16 or higher)
 *   **PostgreSQL** (Running on port 5432)
+*   **Mailtrap Account** (Required to test email features without sending real emails)
 
----
-
-## ⚙️ Installation & Setup
-
-### 1. Database Setup
-1.  Open your PostgreSQL tool (pgAdmin or terminal).
-2.  Create a new, empty database named `hrms_db` (or any name you prefer).
-
-### 2. Backend Setup (Spring Boot)
-1.  Navigate to the backend folder:
-    ```bash
-    cd backend
-    ```
-2.  **Configuration:**
-    *   Locate `src/main/resources/application.properties.example`.
-    *   Rename it to `application.properties`.
-    *   Open the file and **update the following fields** with your local details:
-        ```properties
-        spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DB_NAME_HERE
-        spring.datasource.username=YOUR_POSTGRES_USERNAME
-        spring.datasource.password=YOUR_POSTGRES_PASSWORD
-        
-        # (Optional) Add your Mailtrap credentials for email features
-        spring.mail.username=YOUR_MAILTRAP_USERNAME
-        spring.mail.password=YOUR_MAILTRAP_PASSWORD
-        ```
-3.  Run the application:
-    ```bash
-    mvn spring-boot:run
-    ```
-    *The application will start on `http://localhost:8080`.*
-
-    > **Note on Data Seeding:** On the first run, the application will detect an empty database and automatically seed it with sample Companies, Departments, and Users.
-
-### 3. Frontend Setup (React)
-1.  Open a new terminal and navigate to the frontend folder:
-    ```bash
-    cd frontend
-    ```
-2.  **Configuration:**
-    *   Create a file named `.env.local` in this folder.
-    *   Add the following line:
-        ```
-        REACT_APP_API_BASE_URL=http://localhost:8080
-        ```
-3.  Install dependencies and start:
-    ```bash
-    npm install
-    npm start
-    ```
-    *The application will launch at `http://localhost:3000`.*
-
----
-
-## 🔑 Default Login Credentials
-
-Once the application is running, use these credentials to access different roles. 
-**Note:** Ensure you select the correct Company from the dropdown on the login screen.
-
-| Role | Company | Username | Password |
-| :--- | :--- | :--- | :--- |
-| **Super Admin** | (Any) | `superadmin` | `superadmin123` |
-| **Admin** | Innovate Inc. | `admin_innovate` | `admin123` |
-| **Employee** | Innovate Inc. | `janesmith` | `user123` |
-
----
-
-## 🏛️ Project Structure
-
-*   **`/backend`**: Spring Boot application (API, Security, Database Logic).
-*   **`/frontend`**: React application (UI, State Management).
-
-## 🛡️ Security Note
-This repository contains `example` configuration files. For security reasons, actual API keys, database passwords, and JWT secrets have been removed. You must provide your own in the local `application.properties` file.
+### 2. Database Setup
+Open your PostgreSQL tool (pgAdmin or terminal) and run this single command to create the empty container:
+```sql
+CREATE DATABASE "HRMSbackenddb";
