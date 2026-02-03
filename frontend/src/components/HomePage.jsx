@@ -502,28 +502,66 @@ const HomePage = ({ onLoginSuccess }) => {
               </LoginForm>
             </LoginFormContainer>
         </ContentWrapper>
-        {/* --- Add this Block for Demo Credentials --- */}
+        {/* --- Demo Credentials Block --- */}
         <div style={{
             position: 'absolute',
             top: '20px',
             right: '20px',
-            background: 'rgba(255, 255, 255, 0.9)',
-            padding: '15px',
+            background: 'rgba(255, 255, 255, 0.97)',
+            padding: '16px',
             borderRadius: '8px',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-            fontSize: '0.85em',
-            color: '#333',
-            maxWidth: '300px',
-            zIndex: 100
+            boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+            fontSize: '0.8em',
+            color: '#1a1a1a',
+            maxWidth: '320px',
+            zIndex: 1000,
+            border: '1px solid #e1e4e8'
         }}>
-            <h4 style={{margin: '0 0 10px 0', borderBottom: '1px solid #ccc', paddingBottom: '5px'}}>
+            <h4 style={{
+                margin: '0 0 12px 0',
+                paddingBottom: '8px',
+                borderBottom: '2px solid #5B40B4',
+                color: '#5B40B4',
+                fontFamily: 'sans-serif',
+                fontSize: '0.95em',
+                fontWeight: '700'
+            }}>
                 🔑 Demo Credentials
             </h4>
-            <p style={{margin: '5px 0'}}><strong>Super Admin:</strong> superadmin / superadmin123</p>
-            <p style={{margin: '5px 0'}}><strong>Company:</strong> (Select Any)</p>
-            <hr style={{border: '0', borderTop: '1px solid #eee', margin: '10px 0'}}/>
-            <p style={{margin: '5px 0'}}><strong>Employee:</strong> janesmith / user123</p>
-            <p style={{margin: '5px 0'}}><strong>Company:</strong> Innovate Inc.</p>
+
+            {/* Super Admin */}
+            <div style={{marginBottom: '10px', lineHeight: '1.4'}}>
+                <strong style={{color: '#d63384', display: 'block', fontSize: '0.9em'}}>SUPER ADMIN</strong>
+                <span style={{color: '#666', fontSize: '0.75em', display: 'block', marginTop: '2px'}}>
+                    <strong>User:</strong> superadmin
+                </span>
+                <span style={{color: '#666', fontSize: '0.75em', display: 'block'}}>
+                    <strong>Pass:</strong> superadmin123
+                </span>
+            </div>
+
+            <hr style={{border: '0', borderTop: '1px solid #ddd', margin: '10px 0'}}/>
+
+            {/* Innovate Inc */}
+            <div style={{marginBottom: '10px', lineHeight: '1.4'}}>
+                <strong style={{color: '#0d6efd', display: 'block', fontSize: '0.9em'}}>INNOVATE INC.</strong>
+                <span style={{color: '#666', fontSize: '0.75em', display: 'block', marginTop: '2px'}}>
+                    <strong>Admin:</strong> admin_innovate / admin123
+                </span>
+                <span style={{color: '#666', fontSize: '0.75em', display: 'block'}}>
+                    <strong>User:</strong> janesmith / user123
+                </span>
+            </div>
+
+            <hr style={{border: '0', borderTop: '1px solid #ddd', margin: '10px 0'}}/>
+
+            {/* Global Solutions */}
+            <div style={{lineHeight: '1.4'}}>
+                <strong style={{color: '#198754', display: 'block', fontSize: '0.9em'}}>GLOBAL SOLUTIONS</strong>
+                <span style={{color: '#666', fontSize: '0.75em', display: 'block', marginTop: '2px'}}>
+                    <strong>User:</strong> peterjones / user123
+                </span>
+            </div>
         </div>
         {/* --- End Demo Block --- */}
         <footer style={{ 
