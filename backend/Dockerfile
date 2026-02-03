@@ -11,6 +11,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Create the upload directories inside the container
+#
 RUN mkdir -p uploads/profiles uploads/documents uploads/receipts
 
 EXPOSE 8080
