@@ -72,35 +72,48 @@ public class AuthService {
         }
 
         User user = userOptional.get();
-        if (user.getCompany() == null || !user.getCompany().getId().equals(companyId)) {
-            log.warn("Authentication failed for user '{}': Incorrect company selected. User's company ID: {}, Provided company ID: {}",
-                    normalizedUsername, (user.getCompany() != null ? user.getCompany().getId() : "null"), companyId);
-            throw new RuntimeException("Incorrect company selected");
+
+        // --- COMPANY CHECK LOGIC (Fixed for Super Admin) ---
+        // If the user is NOT a Super Admin, we must verify they belong to the selected company.
+        // Super Admins bypass this check because they aren't tied to a specific company.
+        if (user.getRole() != User.Role.SUPER_ADMIN) {
+            if (user.getCompany() == null || !user.getCompany().getId().equals(companyId)) {
+                log.warn("Authentication failed for user '{}': Incorrect company selected. User's company ID: {}, Provided company ID: {}",
+                        normalizedUsername, (user.getCompany() != null ? user.getCompany().getId() : "null"), companyId);
+                throw new RuntimeException("Incorrect company selected");
+            }
         }
 
+        // --- ROLE / TOGGLE CHECK LOGIC ---
+        // 1. If trying to log in as "Admin", user MUST be ADMIN or SUPER_ADMIN
         if ("admin".equalsIgnoreCase(loginAs) && user.getRole() != User.Role.ADMIN && user.getRole() != User.Role.SUPER_ADMIN) {
             log.warn("Authentication failed for user '{}': Attempted admin login but role is {}", normalizedUsername, user.getRole());
             throw new RuntimeException("User is not authorized for admin access");
         }
+
+        // 2. If trying to log in as "User", user MUST NOT be ADMIN or SUPER_ADMIN
+        // (This forces Admins to use the Admin toggle, keeping the portals separate)
         if ("user".equalsIgnoreCase(loginAs) && (user.getRole() == User.Role.ADMIN || user.getRole() == User.Role.SUPER_ADMIN)) {
             log.warn("Authentication failed for admin/super_admin user '{}': Must log in via admin portal", normalizedUsername);
-            throw new RuntimeException("Invalid credentials");
+            throw new RuntimeException("Admins/Super Admins must log in via the admin portal");
         }
 
+        // --- PASSWORD CHECK ---
         if (!passwordEncoder.matches(password, user.getPassword())) {
             log.warn("Authentication failed for user '{}': Password mismatch.", normalizedUsername);
             throw new RuntimeException("Invalid credentials");
         }
 
-
+        // --- STATUS CHECK ---
         if (user.getStatus() != User.UserStatus.APPROVED) {
             log.warn("Authentication failed for user '{}': Account status is {}", normalizedUsername, user.getStatus());
-            if(user.getStatus() == User.UserStatus.PENDING_APPROVAL) {
+            if (user.getStatus() == User.UserStatus.PENDING_APPROVAL) {
                 throw new RuntimeException("User not approved. Awaiting admin activation.");
             } else {
                 throw new RuntimeException("User account is inactive or rejected.");
             }
         }
+
         log.info("User '{}' authenticated successfully with role {}", normalizedUsername, user.getRole());
         return user;
     }
