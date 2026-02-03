@@ -63,7 +63,7 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(request -> {
                     var config = new CorsConfiguration();
 //                    config.setAllowedOrigins(List.of("http://localhost:3000")); // uncomment this line when running local
-                        config.setAllowedOrigins(List.of("*"));
+                        config.setAllowedOrigins(List.of("https://hrmsportjunade.vercel.app"));
                     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     config.setAllowedHeaders(List.of("*"));
                     config.setAllowCredentials(true);
