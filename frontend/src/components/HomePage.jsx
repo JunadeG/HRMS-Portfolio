@@ -502,6 +502,30 @@ const HomePage = ({ onLoginSuccess }) => {
               </LoginForm>
             </LoginFormContainer>
         </ContentWrapper>
+        {/* --- Add this Block for Demo Credentials --- */}
+        <div style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px',
+            background: 'rgba(255, 255, 255, 0.9)',
+            padding: '15px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+            fontSize: '0.85em',
+            color: '#333',
+            maxWidth: '300px',
+            zIndex: 100
+        }}>
+            <h4 style={{margin: '0 0 10px 0', borderBottom: '1px solid #ccc', paddingBottom: '5px'}}>
+                🔑 Demo Credentials
+            </h4>
+            <p style={{margin: '5px 0'}}><strong>Super Admin:</strong> superadmin / superadmin123</p>
+            <p style={{margin: '5px 0'}}><strong>Company:</strong> (Select Any)</p>
+            <hr style={{border: '0', borderTop: '1px solid #eee', margin: '10px 0'}}/>
+            <p style={{margin: '5px 0'}}><strong>Employee:</strong> janesmith / user123</p>
+            <p style={{margin: '5px 0'}}><strong>Company:</strong> Innovate Inc.</p>
+        </div>
+        {/* --- End Demo Block --- */}
         <footer style={{ 
             position: 'absolute', 
             bottom: '10px', 
