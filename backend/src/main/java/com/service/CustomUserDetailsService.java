@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.model.User;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

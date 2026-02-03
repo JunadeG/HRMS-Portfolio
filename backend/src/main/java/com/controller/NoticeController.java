@@ -1,10 +1,9 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/controller/NoticeController.java
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.NoticeCreateDTO;
-import com.HRMSbackend.HRMSbackend.model.Notice;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.NoticeService;
+import com.DTO.NoticeCreateDTO;
+import com.model.Notice;
+import com.model.User;
+import com.service.NoticeService;
 import jakarta.validation.Valid; // For DTO validation
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

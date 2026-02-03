@@ -1,8 +1,8 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.BloodGroup;
-import com.HRMSbackend.HRMSbackend.model.Gender;
-import com.HRMSbackend.HRMSbackend.model.MaritalStatus;
+import com.model.BloodGroup;
+import com.model.Gender;
+import com.model.MaritalStatus;
 
 import java.time.LocalDate;
 

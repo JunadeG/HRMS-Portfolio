@@ -1,8 +1,8 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.model.ExpenseClaim;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.ExpenseService;
+import com.model.ExpenseClaim;
+import com.model.User;
+import com.service.ExpenseService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

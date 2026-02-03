@@ -1,16 +1,15 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/controller/AuthController.java
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.*;
-import com.HRMSbackend.HRMSbackend.model.Company;
-import com.HRMSbackend.HRMSbackend.model.Department;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.CompanyRepository;
-import com.HRMSbackend.HRMSbackend.repository.DepartmentRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
-import com.HRMSbackend.HRMSbackend.service.AuthService;
-import com.HRMSbackend.HRMSbackend.security.JwtUtil;
-import com.HRMSbackend.HRMSbackend.service.EmailService;
+import com.DTO.*;
+import com.model.Company;
+import com.model.Department;
+import com.model.User;
+import com.repository.CompanyRepository;
+import com.repository.DepartmentRepository;
+import com.repository.UserRepository;
+import com.service.AuthService;
+import com.security.JwtUtil;
+import com.service.EmailService;
 import org.slf4j.Logger; // Import Logger
 import org.slf4j.LoggerFactory; // Import LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired;

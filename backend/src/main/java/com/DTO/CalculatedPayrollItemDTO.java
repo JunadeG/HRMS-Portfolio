@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
 import java.math.BigDecimal;
 

@@ -1,12 +1,12 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.TicketCommentDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TicketDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TicketDetailDTO;
-import com.HRMSbackend.HRMSbackend.model.TicketCategory;
-import com.HRMSbackend.HRMSbackend.model.TicketStatus;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.TicketService;
+import com.DTO.TicketCommentDTO;
+import com.DTO.TicketDTO;
+import com.DTO.TicketDetailDTO;
+import com.model.TicketCategory;
+import com.model.TicketStatus;
+import com.model.User;
+import com.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

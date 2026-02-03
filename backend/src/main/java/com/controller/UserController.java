@@ -1,10 +1,10 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.UserProfileDTO;
-import com.HRMSbackend.HRMSbackend.DTO.UserProfileUpdateDTO;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.FileUploadService;
-import com.HRMSbackend.HRMSbackend.service.UserService;
+import com.DTO.UserProfileDTO;
+import com.DTO.UserProfileUpdateDTO;
+import com.model.User;
+import com.service.FileUploadService;
+import com.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import com.HRMSbackend.HRMSbackend.DTO.MyTeamViewDTO;
+import com.DTO.MyTeamViewDTO;
 
 import java.io.IOException;
 import java.util.List;

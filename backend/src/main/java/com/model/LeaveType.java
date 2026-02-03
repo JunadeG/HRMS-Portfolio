@@ -1,5 +1,4 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/model/LeaveType.java
-package com.HRMSbackend.HRMSbackend.model;
+package com.model;
 
 public enum LeaveType {
     PAID_LEAVE,

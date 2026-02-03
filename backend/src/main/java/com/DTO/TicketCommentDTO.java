@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.TicketComment;
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.TicketComment;
+import com.model.User;
 import java.time.LocalDateTime;
 
 public class TicketCommentDTO {

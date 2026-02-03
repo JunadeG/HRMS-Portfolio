@@ -502,6 +502,14 @@ const HomePage = ({ onLoginSuccess }) => {
               </LoginForm>
             </LoginFormContainer>
         </ContentWrapper>
+        <footer style={{ 
+            position: 'absolute', 
+            bottom: '10px', 
+            color: 'rgba(255,255,255,0.6)', 
+            fontSize: '0.8em' 
+        }}>
+            Developed by Junade
+        </footer>
     </HomePageContainer>
   );
 };

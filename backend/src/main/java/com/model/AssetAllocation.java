@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.model;
+package com.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;

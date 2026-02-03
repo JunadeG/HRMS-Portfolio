@@ -1,10 +1,11 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.AdminUserUpdateDTO;
-import com.HRMSbackend.HRMSbackend.DTO.RegistrationRequest;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.AdminService;
-import com.HRMSbackend.HRMSbackend.service.AuthService;
+
+import com.model.User;
+import com.service.AuthService;
+import com.service.AdminService;
+import com.DTO.RegistrationRequest;
+import com.DTO.AdminUserUpdateDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

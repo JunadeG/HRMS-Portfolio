@@ -1,5 +1,4 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/security/JwtUtil.java
-package com.HRMSbackend.HRMSbackend.security;
+package com.security;
 
 import io.jsonwebtoken.*; // Import all from jjwt
 import io.jsonwebtoken.io.Decoders;

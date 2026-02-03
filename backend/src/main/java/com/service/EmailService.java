@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.model.Meeting;
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.Meeting;
+import com.model.User;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.slf4j.Logger;

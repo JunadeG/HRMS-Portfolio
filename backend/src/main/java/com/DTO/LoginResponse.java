@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
 public class LoginResponse {
     private String username;

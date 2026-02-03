@@ -1,7 +1,6 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/DTO/LeaveRequestCreateDTO.java
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.LeaveType; // <<< IMPORT
+import com.model.LeaveType; // <<< IMPORT
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

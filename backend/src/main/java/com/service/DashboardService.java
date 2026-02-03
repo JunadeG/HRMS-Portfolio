@@ -1,11 +1,11 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.AttendeeDTO;
-import com.HRMSbackend.HRMSbackend.DTO.BirthdayDTO;
-import com.HRMSbackend.HRMSbackend.DTO.DashboardDataDTO;
-import com.HRMSbackend.HRMSbackend.DTO.MeetingViewDTO;
-import com.HRMSbackend.HRMSbackend.model.*;
-import com.HRMSbackend.HRMSbackend.repository.*;
+import com.DTO.AttendeeDTO;
+import com.DTO.BirthdayDTO;
+import com.DTO.DashboardDataDTO;
+import com.DTO.MeetingViewDTO;
+import com.model.*;
+import com.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

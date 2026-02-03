@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.User;
 
 public class UserSearchResultDTO {
     private Long id;

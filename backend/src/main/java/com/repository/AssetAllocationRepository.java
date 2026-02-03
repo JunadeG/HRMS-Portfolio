@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.AssetAllocation;
+import com.model.AssetAllocation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

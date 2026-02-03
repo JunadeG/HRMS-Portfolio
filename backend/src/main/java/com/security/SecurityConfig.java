@@ -1,7 +1,6 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/security/SecurityConfig.java
-package com.HRMSbackend.HRMSbackend.security;
+package com.security;
 
-import com.HRMSbackend.HRMSbackend.service.CustomUserDetailsService;
+import com.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

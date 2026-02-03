@@ -1,8 +1,8 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.*;
-import com.HRMSbackend.HRMSbackend.model.*;
-import com.HRMSbackend.HRMSbackend.repository.*;
+import com.DTO.*;
+import com.model.*;
+import com.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

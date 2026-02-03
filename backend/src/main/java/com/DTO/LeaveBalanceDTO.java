@@ -1,5 +1,4 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/DTO/LeaveBalanceDTO.java
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
 public class LeaveBalanceDTO {
     private double paidLeaveBalance;

@@ -1,12 +1,11 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/service/LeaveService.java
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.LeaveBalanceDTO;
-import com.HRMSbackend.HRMSbackend.DTO.LeaveRequestCreateDTO;
-import com.HRMSbackend.HRMSbackend.DTO.LeaveRequestViewDTO;
-import com.HRMSbackend.HRMSbackend.model.*;
-import com.HRMSbackend.HRMSbackend.repository.LeaveRequestRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.LeaveBalanceDTO;
+import com.DTO.LeaveRequestCreateDTO;
+import com.DTO.LeaveRequestViewDTO;
+import com.model.*;
+import com.repository.LeaveRequestRepository;
+import com.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

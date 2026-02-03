@@ -1,9 +1,9 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.model.Company;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.CompanyRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.model.Company;
+import com.model.User;
+import com.repository.CompanyRepository;
+import com.repository.UserRepository;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

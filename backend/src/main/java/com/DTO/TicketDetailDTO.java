@@ -1,9 +1,9 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.Ticket;
-import com.HRMSbackend.HRMSbackend.model.TicketCategory;
-import com.HRMSbackend.HRMSbackend.model.TicketStatus;
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.Ticket;
+import com.model.TicketCategory;
+import com.model.TicketStatus;
+import com.model.User;
 
 import java.time.LocalDateTime;
 import java.util.List;

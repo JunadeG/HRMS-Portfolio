@@ -1,12 +1,12 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.BillingTimeSummaryDTO;
-import com.HRMSbackend.HRMSbackend.DTO.ProjectTimeSummaryDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TimesheetEntryDTO;
-import com.HRMSbackend.HRMSbackend.model.Project;
-import com.HRMSbackend.HRMSbackend.model.Timesheet;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.TimesheetService;
+import com.DTO.BillingTimeSummaryDTO;
+import com.DTO.ProjectTimeSummaryDTO;
+import com.DTO.TimesheetEntryDTO;
+import com.model.Project;
+import com.model.Timesheet;
+import com.model.User;
+import com.service.TimesheetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;

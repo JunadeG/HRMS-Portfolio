@@ -1,13 +1,12 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/controller/MeetingController.java
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.MeetingAttendeeDTO;
-import com.HRMSbackend.HRMSbackend.DTO.MeetingCreateDTO;
-import com.HRMSbackend.HRMSbackend.model.Meeting;
-import com.HRMSbackend.HRMSbackend.model.MeetingAttendee;
-import com.HRMSbackend.HRMSbackend.model.MeetingResponseStatus;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.MeetingService;
+import com.DTO.MeetingAttendeeDTO;
+import com.DTO.MeetingCreateDTO;
+import com.model.Meeting;
+import com.model.MeetingAttendee;
+import com.model.MeetingResponseStatus;
+import com.model.User;
+import com.service.MeetingService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

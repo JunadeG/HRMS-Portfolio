@@ -1,8 +1,7 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/security/JwtAuthenticationFilter.java
-package com.HRMSbackend.HRMSbackend.security;
+package com.security;
 
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.model.User;
+import com.repository.UserRepository;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.UnsupportedJwtException;

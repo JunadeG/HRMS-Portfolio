@@ -1,12 +1,12 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.TicketCommentDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TicketDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TicketDetailDTO;
-import com.HRMSbackend.HRMSbackend.model.*;
-import com.HRMSbackend.HRMSbackend.repository.TicketCommentRepository;
-import com.HRMSbackend.HRMSbackend.repository.TicketRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.TicketCommentDTO;
+import com.DTO.TicketDTO;
+import com.DTO.TicketDetailDTO;
+import com.model.*;
+import com.repository.TicketCommentRepository;
+import com.repository.TicketRepository;
+import com.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
 // No changes needed here if you prefer sending department name as string from frontend
 // The backend service will handle the lookup.

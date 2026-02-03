@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.Timesheet;
-import com.HRMSbackend.HRMSbackend.model.TimesheetStatus;
+import com.model.Timesheet;
+import com.model.TimesheetStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

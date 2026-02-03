@@ -1,13 +1,13 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.BillingTimeSummaryDTO;
-import com.HRMSbackend.HRMSbackend.DTO.ProjectTimeSummaryDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TimesheetEntryDTO;
-import com.HRMSbackend.HRMSbackend.model.*;
-import com.HRMSbackend.HRMSbackend.repository.ProjectRepository;
-import com.HRMSbackend.HRMSbackend.repository.TimesheetEntryRepository;
-import com.HRMSbackend.HRMSbackend.repository.TimesheetRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.BillingTimeSummaryDTO;
+import com.DTO.ProjectTimeSummaryDTO;
+import com.DTO.TimesheetEntryDTO;
+import com.model.*;
+import com.repository.ProjectRepository;
+import com.repository.TimesheetEntryRepository;
+import com.repository.TimesheetRepository;
+import com.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

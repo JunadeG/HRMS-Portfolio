@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.EmployeeDocument;
-import com.HRMSbackend.HRMSbackend.model.EmployeeDocument.DocumentStatus;
+import com.model.EmployeeDocument;
+import com.model.EmployeeDocument.DocumentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param; // Make sure this is imported

@@ -1,11 +1,11 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import com.HRMSbackend.HRMSbackend.model.User.Role;
+import com.model.User.Role;
 
 import java.util.Collection;
 import java.util.List;

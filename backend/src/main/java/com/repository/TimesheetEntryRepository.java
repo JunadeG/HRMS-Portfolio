@@ -1,8 +1,8 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.DTO.BillingTimeSummaryDTO;
-import com.HRMSbackend.HRMSbackend.DTO.ProjectTimeSummaryDTO;
-import com.HRMSbackend.HRMSbackend.model.TimesheetEntry;
+import com.DTO.BillingTimeSummaryDTO;
+import com.DTO.ProjectTimeSummaryDTO;
+import com.model.TimesheetEntry;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -15,7 +15,7 @@ import java.util.List;
 public interface TimesheetEntryRepository extends JpaRepository<TimesheetEntry, Long> {
 
     // This query is for the "Project Timesheets" tab.
-    @Query("SELECT new com.HRMSbackend.HRMSbackend.DTO.ProjectTimeSummaryDTO(" +
+        @Query("SELECT new com.DTO.ProjectTimeSummaryDTO(" +
             "   e.project.id, " +
             "   e.project.name, " +
             "   CAST(SUM(e.hoursMonday + e.hoursTuesday + e.hoursWednesday + e.hoursThursday + e.hoursFriday + e.hoursSaturday + e.hoursSunday) AS double)" + // <-- MODIFICATION HERE
@@ -32,7 +32,7 @@ public interface TimesheetEntryRepository extends JpaRepository<TimesheetEntry, 
     );
 
     // This query is for the "Time Summary" tab.
-    @Query("SELECT new com.HRMSbackend.HRMSbackend.DTO.BillingTimeSummaryDTO(" +
+        @Query("SELECT new com.DTO.BillingTimeSummaryDTO(" +
             "   e.billingType, " +
             "   CAST(SUM(e.hoursMonday + e.hoursTuesday + e.hoursWednesday + e.hoursThursday + e.hoursFriday + e.hoursSaturday + e.hoursSunday) AS double)" +
             ") " +

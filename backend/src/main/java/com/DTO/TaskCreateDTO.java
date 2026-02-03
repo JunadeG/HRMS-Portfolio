@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;

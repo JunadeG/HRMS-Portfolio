@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.SalaryComponent;
+import com.model.SalaryComponent;
 import java.math.BigDecimal;
 
 public class PayslipItemDTO {

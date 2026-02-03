@@ -1,7 +1,6 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/DTO/NoticeCreateDTO.java
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.Notice; // Import the enum
+import com.model.Notice; // Import the enum
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size; // Optional: Add size constraint

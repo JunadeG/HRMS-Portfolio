@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.Project;
-import com.HRMSbackend.HRMSbackend.model.ProjectStatus;
+import com.model.Project;
+import com.model.ProjectStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

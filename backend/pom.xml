@@ -10,8 +10,8 @@
 		<version>3.3.3</version> <!-- Adjusted to a likely stable version, change back to 3.4.3 if that's correct -->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.HRMSbackend</groupId>
-	<artifactId>HRMSbackend</artifactId>
+	<groupId>com</groupId>
+	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>HRMSbackend</name>
 	<description>Demo project for Spring Boot</description>
@@ -30,9 +30,9 @@
 	</scm>
 
 	<properties>
-		<java.version>21</java.version>
-		<!-- Explicitly set compiler release level -->
-		<maven.compiler.release>21</maven.compiler.release>
+		<java.version>17</java.version>
+		<!-- Set compiler release level to Java 17 for local compatibility -->
+		<maven.compiler.release>17</maven.compiler.release>
 	</properties>
 
 	<dependencies>

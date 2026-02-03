@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.model.Department;
-import com.HRMSbackend.HRMSbackend.repository.DepartmentRepository;
+import com.model.Department;
+import com.repository.DepartmentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

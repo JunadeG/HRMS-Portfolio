@@ -1,12 +1,12 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.MyTeamViewDTO;
-import com.HRMSbackend.HRMSbackend.DTO.UserProfileDTO;
-import com.HRMSbackend.HRMSbackend.DTO.UserProfileUpdateDTO;
-import com.HRMSbackend.HRMSbackend.model.Department;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.DepartmentRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.MyTeamViewDTO;
+import com.DTO.UserProfileDTO;
+import com.DTO.UserProfileUpdateDTO;
+import com.model.Department;
+import com.model.User;
+import com.repository.DepartmentRepository;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;

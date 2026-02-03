@@ -1,9 +1,9 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.model.ExpenseClaim;
-import com.HRMSbackend.HRMSbackend.model.ExpenseClaimStatus;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.ExpenseClaimRepository;
+import com.model.ExpenseClaim;
+import com.model.ExpenseClaimStatus;
+import com.model.User;
+import com.repository.ExpenseClaimRepository;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

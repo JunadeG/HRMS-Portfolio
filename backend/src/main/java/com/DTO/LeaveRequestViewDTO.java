@@ -1,8 +1,7 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/DTO/LeaveRequestViewDTO.java
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.LeaveStatus;
-import com.HRMSbackend.HRMSbackend.model.LeaveType; // <<< IMPORT
+import com.model.LeaveStatus;
+import com.model.LeaveType; // <<< IMPORT
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 

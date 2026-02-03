@@ -1,11 +1,10 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/controller/LeaveController.java
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.LeaveBalanceDTO;
-import com.HRMSbackend.HRMSbackend.DTO.LeaveRequestCreateDTO;
-import com.HRMSbackend.HRMSbackend.DTO.LeaveRequestViewDTO;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.LeaveService;
+import com.DTO.LeaveBalanceDTO;
+import com.DTO.LeaveRequestCreateDTO;
+import com.DTO.LeaveRequestViewDTO;
+import com.model.User;
+import com.service.LeaveService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

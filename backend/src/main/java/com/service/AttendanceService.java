@@ -1,15 +1,15 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.AttendanceCorrectionAdminViewDTO;
-import com.HRMSbackend.HRMSbackend.DTO.AttendanceCorrectionRequestDTO;
-import com.HRMSbackend.HRMSbackend.DTO.AttendanceRecordDTO;
-import com.HRMSbackend.HRMSbackend.DTO.MonthlyAttendanceSummaryDTO;
-import com.HRMSbackend.HRMSbackend.model.Attendance;
-import com.HRMSbackend.HRMSbackend.model.AttendanceCorrection;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.AttendanceCorrectionRepository;
-import com.HRMSbackend.HRMSbackend.repository.AttendanceRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.AttendanceCorrectionAdminViewDTO;
+import com.DTO.AttendanceCorrectionRequestDTO;
+import com.DTO.AttendanceRecordDTO;
+import com.DTO.MonthlyAttendanceSummaryDTO;
+import com.model.Attendance;
+import com.model.AttendanceCorrection;
+import com.model.User;
+import com.repository.AttendanceCorrectionRepository;
+import com.repository.AttendanceRepository;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;

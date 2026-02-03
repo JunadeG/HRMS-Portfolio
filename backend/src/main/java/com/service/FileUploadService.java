@@ -1,5 +1,4 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/service/FileUploadService.java
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

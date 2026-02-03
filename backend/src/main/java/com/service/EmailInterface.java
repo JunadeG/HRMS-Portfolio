@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
 public interface EmailInterface {
     void sendPasswordResetLink(String to, String resetLink);

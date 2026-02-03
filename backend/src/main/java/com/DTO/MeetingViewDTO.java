@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.MeetingResponseStatus;
+import com.model.MeetingResponseStatus;
 
 import java.time.Instant;
 import java.util.Set;

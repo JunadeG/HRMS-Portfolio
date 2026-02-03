@@ -1,13 +1,13 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.AssetDto;
-import com.HRMSbackend.HRMSbackend.model.Asset;
-import com.HRMSbackend.HRMSbackend.model.AssetAllocation;
-import com.HRMSbackend.HRMSbackend.model.Company;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.AssetAllocationRepository;
-import com.HRMSbackend.HRMSbackend.repository.AssetRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.AssetDto;
+import com.model.Asset;
+import com.model.AssetAllocation;
+import com.model.Company;
+import com.model.User;
+import com.repository.AssetAllocationRepository;
+import com.repository.AssetRepository;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;

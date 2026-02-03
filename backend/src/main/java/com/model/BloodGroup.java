@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.model;
+package com.model;
 
 public enum BloodGroup {
     A_POSITIVE, A_NEGATIVE,

@@ -1,11 +1,11 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.EmployeeDocumentDTO;
-import com.HRMSbackend.HRMSbackend.model.Company;
-import com.HRMSbackend.HRMSbackend.model.EmployeeDocument;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.EmployeeDocumentRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.EmployeeDocumentDTO;
+import com.model.Company;
+import com.model.EmployeeDocument;
+import com.model.User;
+import com.repository.EmployeeDocumentRepository;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.HRMSbackend.HRMSbackend.service.AuthService.log;
+import static com.service.AuthService.log;
 
 @Service
 public class DocumentService {

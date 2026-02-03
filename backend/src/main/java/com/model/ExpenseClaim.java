@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.model;
+package com.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

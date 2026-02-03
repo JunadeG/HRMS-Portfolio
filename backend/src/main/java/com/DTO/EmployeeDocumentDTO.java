@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.EmployeeDocument;
+import com.model.EmployeeDocument;
 import java.time.LocalDateTime;
 
 public class EmployeeDocumentDTO {

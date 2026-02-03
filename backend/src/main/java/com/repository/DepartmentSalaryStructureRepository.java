@@ -1,7 +1,6 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/repository/DepartmentSalaryStructureRepository.java
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.DepartmentSalaryStructure;
+import com.model.DepartmentSalaryStructure;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

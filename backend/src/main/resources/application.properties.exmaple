@@ -29,7 +29,7 @@ frontend.url=http://localhost:3000
 
 # Logging Levels (Set to DEBUG for troubleshooting)
 logging.level.root=INFO
-logging.level.com.HRMSbackend.HRMSbackend=DEBUG
+logging.level.com=DEBUG
 logging.level.org.springframework.web=DEBUG
 logging.level.org.springframework.security=DEBUG
 logging.level.org.hibernate.SQL=DEBUG

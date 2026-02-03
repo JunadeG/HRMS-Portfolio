@@ -1,11 +1,11 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.model.Company;
-import com.HRMSbackend.HRMSbackend.model.Department;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.CompanyRepository;
-import com.HRMSbackend.HRMSbackend.repository.DepartmentRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.model.Company;
+import com.model.Department;
+import com.model.User;
+import com.repository.CompanyRepository;
+import com.repository.DepartmentRepository;
+import com.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

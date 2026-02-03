@@ -177,7 +177,10 @@ const Sidebar = ({ userRole, onLogout }) => {
     <SidebarContainer>
       <LogoContainer>
         <LogoIcon />
-        <LogoText>HRMS Portal</LogoText>
+        <div>
+          <LogoText>HRMS Portal</LogoText>
+          <span style={{ fontSize: '0.6em', opacity: 0.7, display: 'block' }}>By Junade</span>
+        </div>
       </LogoContainer>
 
       <SidebarNav>

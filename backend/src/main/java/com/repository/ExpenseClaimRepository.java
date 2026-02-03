@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.ExpenseClaim;
-import com.HRMSbackend.HRMSbackend.model.ExpenseClaimStatus;
+import com.model.ExpenseClaim;
+import com.model.ExpenseClaimStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

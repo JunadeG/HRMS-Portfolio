@@ -1,16 +1,16 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.ProjectAllocationCreateDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TaskCreateDTO;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.ProjectManagementService;
+import com.DTO.ProjectAllocationCreateDTO;
+import com.DTO.TaskCreateDTO;
+import com.model.User;
+import com.service.ProjectManagementService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
-import com.HRMSbackend.HRMSbackend.model.Task.TaskStatus;
+import com.model.Task.TaskStatus;
 
 import java.util.Map;
 

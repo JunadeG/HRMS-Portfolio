@@ -1,10 +1,9 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/service/NoticeService.java
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.NoticeCreateDTO;
-import com.HRMSbackend.HRMSbackend.model.Notice;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.NoticeRepository;
+import com.DTO.NoticeCreateDTO;
+import com.model.Notice;
+import com.model.User;
+import com.repository.NoticeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

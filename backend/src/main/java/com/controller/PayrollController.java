@@ -1,9 +1,9 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.*;
-import com.HRMSbackend.HRMSbackend.model.EmployeeSalaryComponent;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.PayrollService;
+import com.DTO.*;
+import com.model.EmployeeSalaryComponent;
+import com.model.User;
+import com.service.PayrollService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

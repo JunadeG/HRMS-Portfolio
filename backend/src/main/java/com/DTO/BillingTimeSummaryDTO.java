@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.BillingType;
+import com.model.BillingType;
 import java.math.BigDecimal;
 
 public class BillingTimeSummaryDTO {

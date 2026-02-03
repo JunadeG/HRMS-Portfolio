@@ -1,5 +1,5 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/config/MvcConfig.java
-package com.HRMSbackend.HRMSbackend.config;
+
+package com.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

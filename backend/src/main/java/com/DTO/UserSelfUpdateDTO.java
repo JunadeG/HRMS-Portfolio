@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
 // This DTO is for an employee updating their own payroll-related details.
 public class UserSelfUpdateDTO {

@@ -1,7 +1,7 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.Attendance;
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.Attendance;
+import com.model.User;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

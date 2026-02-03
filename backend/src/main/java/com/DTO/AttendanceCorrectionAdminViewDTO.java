@@ -1,6 +1,6 @@
-package com.HRMSbackend.HRMSbackend.DTO;
+package com.DTO;
 
-import com.HRMSbackend.HRMSbackend.model.AttendanceCorrection;
+import com.model.AttendanceCorrection;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

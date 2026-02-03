@@ -1,11 +1,11 @@
-package com.HRMSbackend.HRMSbackend.controller;
+package com.controller;
 
-import com.HRMSbackend.HRMSbackend.DTO.AttendanceCorrectionRequestDTO;
-import com.HRMSbackend.HRMSbackend.DTO.AttendanceRecordDTO;
-import com.HRMSbackend.HRMSbackend.DTO.MonthlyAttendanceSummaryDTO;
-import com.HRMSbackend.HRMSbackend.model.Attendance;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.service.AttendanceService;
+import com.DTO.AttendanceCorrectionRequestDTO;
+import com.DTO.AttendanceRecordDTO;
+import com.DTO.MonthlyAttendanceSummaryDTO;
+import com.model.Attendance;
+import com.model.User;
+import com.service.AttendanceService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;

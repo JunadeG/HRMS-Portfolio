@@ -1,9 +1,8 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/repository/LeaveRequestRepository.java
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.LeaveRequest;
-import com.HRMSbackend.HRMSbackend.model.LeaveStatus;
-import com.HRMSbackend.HRMSbackend.model.User;
+import com.model.LeaveRequest;
+import com.model.LeaveStatus;
+import com.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

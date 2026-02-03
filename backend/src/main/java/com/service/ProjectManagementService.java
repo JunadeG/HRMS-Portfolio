@@ -1,25 +1,25 @@
-package com.HRMSbackend.HRMSbackend.service;
+package com.service;
 
-import com.HRMSbackend.HRMSbackend.DTO.ProjectAllocationCreateDTO;
-import com.HRMSbackend.HRMSbackend.DTO.TaskCreateDTO;
-import com.HRMSbackend.HRMSbackend.model.Project;
-import com.HRMSbackend.HRMSbackend.model.ProjectAllocation;
-import com.HRMSbackend.HRMSbackend.model.Task;
-import com.HRMSbackend.HRMSbackend.model.User;
-import com.HRMSbackend.HRMSbackend.repository.ProjectAllocationRepository;
-import com.HRMSbackend.HRMSbackend.repository.ProjectRepository;
-import com.HRMSbackend.HRMSbackend.repository.TaskRepository;
-import com.HRMSbackend.HRMSbackend.repository.UserRepository;
+import com.DTO.ProjectAllocationCreateDTO;
+import com.DTO.TaskCreateDTO;
+import com.model.Project;
+import com.model.ProjectAllocation;
+import com.model.Task;
+import com.model.User;
+import com.repository.ProjectAllocationRepository;
+import com.repository.ProjectRepository;
+import com.repository.TaskRepository;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.HRMSbackend.HRMSbackend.model.Task.TaskStatus;
+import com.model.Task.TaskStatus;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import static com.HRMSbackend.HRMSbackend.service.AuthService.log;
+import static com.service.AuthService.log;
 
 @Service
 public class ProjectManagementService {

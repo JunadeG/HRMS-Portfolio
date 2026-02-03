@@ -1,7 +1,6 @@
-// src/main/java/com/HRMSbackend/HRMSbackend/repository/RecruitmentRepository.java
-package com.HRMSbackend.HRMSbackend.repository;
+package com.repository;
 
-import com.HRMSbackend.HRMSbackend.model.Recruitment; // Import the Entity
+import com.model.Recruitment; // Import the Entity
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository; // Import @Repository
 

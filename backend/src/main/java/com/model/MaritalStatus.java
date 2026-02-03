@@ -1,4 +1,4 @@
-package com.HRMSbackend.HRMSbackend.model;
+package com.model;
 
 public enum MaritalStatus {
     SINGLE,
